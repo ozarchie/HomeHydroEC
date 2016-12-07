@@ -1,5 +1,21 @@
 # HomeHydroEC
-Extension of Michael Ratcliffe's excellent EC project  
+An extension of Michael Ratcliffe's excellent EC project.  
+
+This project addresses the issue of polarization by implementing a square wave balanced resistor approach to measurement.  
+An additional analog input channel is required.  
+The 1k resistor is split in two as two 470R resistors and the probe inserted between the resistors.  
+The voltage across the 470R sense resistor allows calculation of the sense current.  
+The voltage across the prongs and the sense current allows determination of the electrical conductivity.  
+
+Testing and documentation is underway.
+
+The Kcell of the probe is calculated using standard formula and measurements of the AC probe. 
+EC Measurements agree well with standard Chinese TDC&EC meters.  
+
+Documentation is included in the code and will be extracted to the Wiki.  
+
+Original ideas and program published by -:  
+
 www.MichaelRatcliffe.com/projects  
 https://www.element14.com/community/community/design-challenges/vertical-farming/blog/2015/09/13/automated-green-house-blogs-main-page  
  
