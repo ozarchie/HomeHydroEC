@@ -1,5 +1,7 @@
 # HomeHydroEC
-An extension of Michael Ratcliffe's excellent EC project.  
+An extension of Michael Ratcliffe's excellent EC project. 
+See the Wiki for a full description.  
+
 
 This project addresses the issue of polarization by implementing a square wave balanced resistor approach to measurement.  
 An additional analog input channel is required.  
@@ -12,7 +14,7 @@ Testing and documentation is underway.
 The Kcell of the probe is calculated using standard formula and measurements of the AC probe. 
 EC Measurements agree well with standard Chinese TDC&EC meters.  
 
-Documentation is included in the code and will be extracted to the Wiki.  
+Documentation is included in the code.  
 
 Original ideas and program published by -:  
 
