@@ -1,7 +1,7 @@
 # HomeHydroEC
 =============
-An extension of Michael Ratcliffe's excellent EC project. 
-See the Project Wiki for a full description.  
+An extension of Michael Ratcliffe's excellent EC project.   
+<B>See the Project Wiki for a full description.  </B>
 
 ## Extensions  
 -------------
@@ -18,7 +18,8 @@ Testing and documentation is underway. Documentation is included in the code.
 
 The Kcell of the probe is calculated using standard formula and measurements of the AC probe. 
 EC Measurements agree well with Chinese TDC&EC meters.  
-  
+See the Project Wiki for a full description.  
+
 ## Original Work  
 
 Original ideas and program published by -:  
