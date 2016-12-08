@@ -300,8 +300,9 @@ float readTemp(int tsensor) {
 // Read data from EC probe
 // -----------------------
 // type typeEC  0   T Compensated Electrical conductivity
-// type typePPM 1   T Compensated ppm
-// type typeRc  2   Uncompensated Electrical Resistance
+// type typeECu 1   T Compensated Electrical conductivity
+// type typePPM 2   T Compensated ppm
+// type typeRc  3   Uncompensated Electrical Resistance
 
 float readECProbe(int type) {
 
@@ -309,13 +310,17 @@ float readECProbe(int type) {
   float x;
   ECVolts = 0;
   RsVolts = 0;
+  Polarity = 0;
   
   TemperatureStart = readTemp(0);    // Read temperature   
   pinMode(ECA,OUTPUT);               // Set drive pins to outputs
   pinMode(ECB,OUTPUT);
-
+  digitalWrite(ECA,LOW);            // Set PinA low
+  digitalWrite(ECB,LOW);            // Set PinB low
+  delay(25);                        // Wait til settled
+  
 // Measure voltages of probe - average 10 
-  while(i <= 10){    
+  while(i < 10){    
 // Alternately set polarity of sensing circuit to avoid polarizing the solution
 //  and fouling the probe
 
@@ -324,8 +329,8 @@ float readECProbe(int type) {
       digitalWrite(ECB,LOW);    // Set PinB low
     }
     else if (Polarity == 1) {
-      digitalWrite(ECB,HIGH);   // Set PinB high
       digitalWrite(ECA,LOW);    // Set PinA low
+      digitalWrite(ECB,HIGH);   // Set PinB high
     }
     delay(25);                  // Wait for settling
     
@@ -354,6 +359,9 @@ float readECProbe(int type) {
 
   };
 
+  digitalWrite(ECA,LOW);            // Set PinA low
+  digitalWrite(ECB,LOW);            // Set PinB low
+  delay(25);                        // Wait til settled
   pinMode(ECA,INPUT);               // Reset drive pins to inputs
   pinMode(ECB,INPUT);
 
