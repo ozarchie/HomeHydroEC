@@ -8,6 +8,7 @@ An additional analog input channel is required.
 The 1k resistor is split in two as two 470R resistors and the probe inserted between the resistors.  
 The voltage across the 470R sense resistor allows calculation of the sense current.  
 The voltage across the prongs and the sense current allows determination of the electrical conductivity.  
+An 18B20 sensor is connected to monitor the solution temperature.  
 
 ![Schematic](https://cloud.githubusercontent.com/assets/6479143/21030857/665dd92a-bdec-11e6-813b-8602e37aa00d.png)
 
