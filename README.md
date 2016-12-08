@@ -1,8 +1,10 @@
 # HomeHydroEC
+=============
 An extension of Michael Ratcliffe's excellent EC project. 
-See the Wiki for a full description.  
+See the Project Wiki for a full description.  
 
-
+## Extensions  
+-------------
 This project addresses the issue of polarization by implementing a square wave balanced resistor approach to measurement.  
 An additional analog input channel is required.  
 The 1k resistor is split in two as two 470R resistors and the probe inserted between the resistors.  
@@ -12,12 +14,12 @@ An 18B20 sensor is connected to monitor the solution temperature.
 
 ![Schematic](https://cloud.githubusercontent.com/assets/6479143/21031359/c254f52c-bdee-11e6-8f4b-8af198f6637a.png)
 
-Testing and documentation is underway.
+Testing and documentation is underway. Documentation is included in the code.  
 
 The Kcell of the probe is calculated using standard formula and measurements of the AC probe. 
-EC Measurements agree well with standard Chinese TDC&EC meters.  
-
-Documentation is included in the code.  
+EC Measurements agree well with Chinese TDC&EC meters.  
+  
+## Original Work  
 
 Original ideas and program published by -:  
 
