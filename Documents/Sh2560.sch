@@ -4617,7 +4617,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </plain>
 <instances>
 <instance part="PCB1" gate="G$1" x="83.82" y="33.02"/>
-<instance part="R1" gate="G$1" x="78.74" y="81.28"/>
+<instance part="R1" gate="G$1" x="91.44" y="83.82" rot="R90"/>
 <instance part="R2" gate="G$1" x="86.36" y="73.66"/>
 <instance part="R3" gate="G$1" x="93.98" y="68.58"/>
 <instance part="CN1" gate="-1" x="165.1" y="78.74"/>
@@ -4649,8 +4649,13 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="PCB1" gate="G$1" pin="10"/>
-<wire x1="73.66" y1="81.28" x2="55.88" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="81.28" x2="55.88" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="78.74" x2="55.88" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="78.74" x2="55.88" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="78.74" x2="121.92" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="78.74" x2="121.92" y2="76.2" width="0.1524" layer="91"/>
+<junction x="91.44" y="78.74"/>
+<pinref part="CN1" gate="-2" pin="S"/>
+<wire x1="121.92" y1="76.2" x2="162.56" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -4668,31 +4673,40 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="154.94" y1="53.34" x2="154.94" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="CN1" gate="-1" pin="S"/>
 <wire x1="154.94" y1="78.74" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="CN1" gate="-4" pin="S"/>
-<wire x1="162.56" y1="71.12" x2="121.92" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="121.92" y1="71.12" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="68.58" x2="99.06" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="88.9" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="91.44" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="91.44" x2="124.46" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="78.74" x2="154.94" y2="78.74" width="0.1524" layer="91"/>
+<junction x="154.94" y="78.74"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="CN1" gate="-3" pin="S"/>
-<wire x1="91.44" y1="73.66" x2="162.56" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="73.66" x2="152.4" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="73.66" x2="162.56" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="73.66" x2="152.4" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="152.4" y="73.66"/>
+<wire x1="152.4" y1="-5.08" x2="76.2" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="PCB1" gate="G$1" pin="A1"/>
+<wire x1="76.2" y1="-5.08" x2="76.2" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="N$6" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="83.82" y1="81.28" x2="119.38" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="81.28" x2="124.46" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="CN1" gate="-2" pin="S"/>
-<wire x1="124.46" y1="76.2" x2="162.56" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="68.58" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="68.58" x2="121.92" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="CN1" gate="-4" pin="S"/>
+<wire x1="121.92" y1="71.12" x2="149.86" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="71.12" x2="162.56" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="71.12" x2="149.86" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="149.86" y="71.12"/>
+<wire x1="149.86" y1="-2.54" x2="73.66" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="PCB1" gate="G$1" pin="A0"/>
+<wire x1="73.66" y1="-2.54" x2="73.66" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
