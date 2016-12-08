@@ -9,6 +9,13 @@ The 1k resistor is split in two as two 470R resistors and the probe inserted bet
 The voltage across the 470R sense resistor allows calculation of the sense current.  
 The voltage across the prongs and the sense current allows determination of the electrical conductivity.  
 
+<p align="center">
+ <img src=http://cloud.githubusercontent.com/assets/6479143/21030857/665dd92a-bdec-11e6-813b-8602e37aa00d.png width="350"/>
+
+</p>
+
+![Schematic](http://cloud.githubusercontent.com/assets/6479143/21030857/665dd92a-bdec-11e6-813b-8602e37aa00d.png)
+
 Testing and documentation is underway.
 
 The Kcell of the probe is calculated using standard formula and measurements of the AC probe. 
