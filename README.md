@@ -2,7 +2,7 @@
 =============
 An extension of Michael Ratcliffe's excellent EC project.   
 <B>See the Project Wiki for a full description.  </B>  
-https://github.com/ozarchie/HomeHydroEC.wiki.git  
+https://github.com/ozarchie/HomeHydroEC/wiki  
 
 ## Extensions  
 -------------
