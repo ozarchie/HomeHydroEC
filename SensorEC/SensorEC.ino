@@ -103,7 +103,7 @@ float Vin = 5;                    // Power supply value
 // float Kc = (s / (2 * Ap));          // Two prongs
 // float K = Kc;                       // Calculated cell constant
 
-// However, theory suggests that the other face and sides on each prong only contribute to 'fringe' effects.
+// However, practice suggests that the other face and sides on each prong only contribute to 'fringe' effects.
 // so ...
 float  Ap = (l * w) + (l * t) - pi * r * r;     // Surface area of one prong
 float  Kc = (s / (2 * Ap));                     // Two prongs
@@ -145,7 +145,8 @@ float Ic = 0;
 // -------------------------
 //  Measuring frequencies of a typical conductivity meter
 //  94 Hz     in 4.000 µS and 40.00 µS ranges
-//  46.9 kHz  in 400.0 mS and 2.000 S ranges
+//  46.9 Hz  in 400.0 mS and 2.000 S ranges
+#define ECDelay 50              // 25 Hz
 
 // Analog reference options
 // ------------------------
@@ -159,7 +160,7 @@ float Ic = 0;
 
 //************ Temp Probe Related *********************************************//
 #define ONE_WIRE_BUS 10          // Data wire For Temp Probe is plugged into pin 10 on the Arduino
-const int TempProbePositive =8;  // Temp Probe power connected to pin 9
+const int TempProbePositive=8;  // Temp Probe power connected to pin 9
 const int TempProbeNegative=9;   // Temp Probe Negative connected to pin 8
 
 OneWire oneWire(ONE_WIRE_BUS);// Setup a oneWire instance to communicate with any OneWire devices
@@ -192,7 +193,7 @@ void setup()
   lcd.print("Calculated Kc: ");
   lcd.println(Kc);
     
-  Serial.print("EC Sensor V1");
+  Serial.println("EC Sensor V1.1");
   Serial.print("Calculated Kc: ");
   Serial.println(K); 
       
@@ -317,7 +318,7 @@ float readECProbe(int type) {
   pinMode(ECB,OUTPUT);
   digitalWrite(ECA,LOW);            // Set PinA low
   digitalWrite(ECB,LOW);            // Set PinB low
-  delay(25);                        // Wait til settled
+  delay(ECDelay);                   // Wait til settled
   
 // Measure voltages of probe - average 10 
   while(i < 10){    
@@ -332,7 +333,7 @@ float readECProbe(int type) {
       digitalWrite(ECA,LOW);    // Set PinA low
       digitalWrite(ECB,HIGH);   // Set PinB high
     }
-    delay(25);                  // Wait for settling
+    delay(ECDelay);             // Wait for settling
     
     if (Polarity == 0) {               // Take alternate A->B, B->A readings
       x = analogRead(ECAin);
@@ -361,7 +362,7 @@ float readECProbe(int type) {
 
   digitalWrite(ECA,LOW);            // Set PinA low
   digitalWrite(ECB,LOW);            // Set PinB low
-  delay(25);                        // Wait til settled
+  delay(ECDelay);                   // Wait til settled
   pinMode(ECA,INPUT);               // Reset drive pins to inputs
   pinMode(ECB,INPUT);
 

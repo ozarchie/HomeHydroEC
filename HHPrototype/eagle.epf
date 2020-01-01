@@ -1,19 +1,19 @@
 [Eagle]
-Version="07 07 00"
+Version="08 02 02"
 Platform="Mac OS X"
-Serial="62191E841E-LSR-WLM-1EL"
 Globals="Globals"
 Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
+UsedLibrary="/Applications/EAGLE-7.7.0/lbr/adafruit.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="615 298 1669 794"
+Loc="47 71 1246 670"
 State=2
 Number=0
 
 [Desktop]
-Screen="3200 1200"
+Screen="1280 800"
 Window="Win_1"
